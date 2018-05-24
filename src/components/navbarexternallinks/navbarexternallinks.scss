@@ -1,5 +1,10 @@
 navbarexternallinks {
-    a{
-        padding: .2em
+    .external-links-set{
+        address{
+            a{
+                padding: .3em;
+                color: color($colors, my-blue-green);
+            }
+        }
     }
 }

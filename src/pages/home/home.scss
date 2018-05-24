@@ -1,16 +1,19 @@
 page-home {
-    span{
-        color: black;
-        font-family: 'Roboto', sans-serif;
-        font-size: 2em;
-        font-style: bold;
-        font-weight: 700;
-        float:left;
-        padding: .2em;
+    ion-navbar{
 
-    }
+        span{
+            color: white;
+            font-family: 'Roboto', sans-serif;
+            font-size: 2em;
+            font-style: bold; 
+            font-weight: 700;
+            float:left;
+            padding: .2em;
 
-    .external-links{
-        float: left;
+        }
+
+        .external-links{
+            float: left;
+        }
     }
 }
