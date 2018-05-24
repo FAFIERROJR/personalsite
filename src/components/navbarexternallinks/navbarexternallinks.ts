@@ -11,12 +11,9 @@ import { Component } from '@angular/core';
   templateUrl: 'navbarexternallinks.html'
 })
 export class NavbarexternallinksComponent {
-
-  text: string;
-
+  
   constructor() {
-    console.log('Hello NavbarexternallinksComponent Component');
-    this.text = 'Hello World';
+
   }
 
 }
