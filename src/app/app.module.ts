@@ -5,26 +5,41 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { StatusBar } from '@ionic-native/status-bar';
 
 import { MyApp } from './app.component';
-import { HomePage } from '../pages/home/home';
+import { NavbarexternallinksComponent} from '../components/navbarexternallinks/navbarexternallinks'
+
+import { AngularFireModule } from 'angularfire2'
+import { AngularFirestoreModule, AngularFirestore } from 'angularfire2/firestore'
+
+
+export const firebaseConfig = {
+  apiKey: "AIzaSyAZ1e8Zw1yThZ9LHnS1i6xk8dfmkdUJrKA",
+  authDomain: "personalsite-d1f5a.firebaseapp.com",
+  databaseURL: "https://personalsite-d1f5a.firebaseio.com",
+  projectId: "personalsite-d1f5a",
+  storageBucket: "personalsite-d1f5a.appspot.com",
+  messagingSenderId: "574793251773"
+};
+
 
 @NgModule({
   declarations: [
     MyApp,
-    HomePage
   ],
   imports: [
     BrowserModule,
-    IonicModule.forRoot(MyApp)
+    IonicModule.forRoot(MyApp),
+    AngularFireModule.initializeApp(firebaseConfig),
+    AngularFirestoreModule,
   ],
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    HomePage
   ],
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    AngularFirestore
   ]
 })
 export class AppModule {}
