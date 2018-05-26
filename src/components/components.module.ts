@@ -2,12 +2,15 @@ import { NgModule } from '@angular/core';
 import { NavbarexternallinksComponent } from './navbarexternallinks/navbarexternallinks';
 import { EducationComponent } from './education/education';
 import { IonicModule } from 'ionic-angular';
+import { SchooldetailComponent } from './schooldetail/schooldetail';
 @NgModule({
 	declarations: [
 		NavbarexternallinksComponent,
-    EducationComponent],
+    EducationComponent,
+    SchooldetailComponent],
 	imports: [IonicModule.forRoot(ComponentsModule),],
 	exports: [NavbarexternallinksComponent,
-    EducationComponent]
+    EducationComponent,
+    SchooldetailComponent]
 })
 export class ComponentsModule {}

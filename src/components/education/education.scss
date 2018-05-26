@@ -1,11 +1,55 @@
 education {
-    #ed-title{
-      padding: .3em;
+    #ed-header{
+        margin: .2em;
+
+        #ed-title{
+            color: color($colors, my-blue-green);
+            margin: .2em;
+        }
+        .ed-subtitle{
+            margin: .2em;
+            color: gold
+        }
     }
-    #sub-title{
-        padding: .3em;
-    }
-    .school{
-        height: auto;
+    #ed-content{
+        align-content: center;
+
+        .school{
+            display: inline-flex;
+            height: 200px;
+            padding: 0;
+            position: relative;
+            width: 350px;
+
+
+            .school-img{
+                height: 100%;
+                width: 100%;
+            }
+
+            .school-name{
+                color: white;
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: 2em;
+                text-shadow: 1px 1px 0px #000000;
+                font-weight: 600;
+                position: absolute;
+                text-align: center;
+                top: 36%;
+            }
+            .school-years{
+                color: white;
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: 1.5em;
+                font-weight: 500;
+                margin: 0 auto;
+                position: absolute;
+                text-align: center;
+                text-shadow: 1px 1px 0px #000000;
+                top: 75%;
+                width: 100%;
+            }
+
+        }
     }
 }

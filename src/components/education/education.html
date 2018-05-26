@@ -1,17 +1,20 @@
 <!-- Generated template for the EducationComponent component -->
 <div>
-  <ion-row align-items-center>
+  <div id="ed-header">
   <h1 id="ed-title">Education</h1>
-  <h2 id="ed-subtitle">Major GPA: 4.0</h2>
-  </ion-row>
-    <ion-row align-items-center>
-      <ion-card class="school" *ngFor="let school of schools" col-3>
-        <ion-card-header>
-            {{school.name}}
-        </ion-card-header>
-        <ion-card-content>
-          <span>{{school.begin_year}}-{{school.end_year}}</span>
-        </ion-card-content>
-      </ion-card>
-    </ion-row>
+  <h4 class="ed-subtitle">Bachelor of Science in Computer Science</h4>
+  <h4 class="ed-subtitle">Major GPA: 4.0</h4>
+  </div>
+  <div id="ed-content">
+    <ion-card class="school" *ngFor="let school of schools">
+      <img class="school-img" src="{{school.img_url}}" />
+      <div class="school-name">
+          {{school.name}}
+      </div>
+      <div class="school-years">
+        {{school.begin_year}}-{{school.end_year}}
+      </div>
+    </ion-card>
+  </div>
+
 </div>
