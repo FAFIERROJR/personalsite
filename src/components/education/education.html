@@ -1,0 +1,20 @@
+<!-- Generated template for the EducationComponent component -->
+<div>
+  <div id="ed-header">
+  <h1 id="ed-title">Education</h1>
+  <h4 class="ed-subtitle">Bachelor of Science in Computer Science</h4>
+  <h4 class="ed-subtitle">Major GPA: 4.0</h4>
+  </div>
+  <div id="ed-content">
+    <ion-card class="school" *ngFor="let school of schools">
+      <img class="school-img" src="{{school.img_url}}" />
+      <div class="school-name">
+          {{school.name}}
+      </div>
+      <div class="school-years">
+        {{school.begin_year}}-{{school.end_year}}
+      </div>
+    </ion-card>
+  </div>
+
+</div>
