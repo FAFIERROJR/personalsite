@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import { School } from '../../models/school';
 import { NavParams, NavController } from 'ionic-angular';
-import { EducationPage } from '../../pages/education/education';
 /**
  * Generated class for the EducationComponent component.
  *
@@ -33,7 +32,7 @@ export class EducationComponent {
   }
 
   go_to_school(school_name: string){
-    this.navCtrl.push('EducationPage', {'school_name': school_name })
+    this.navCtrl.push('SchoolPage', {'school_name': school_name })
   }
 
 }

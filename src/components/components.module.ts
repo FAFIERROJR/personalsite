@@ -3,14 +3,14 @@ import { NavbarexternallinksComponent } from './navbarexternallinks/navbarextern
 import { EducationComponent } from './education/education';
 import { IonicModule } from 'ionic-angular';
 import { SchooldetailComponent } from './schooldetail/schooldetail';
-import { EducationPageModule } from '../pages/education/education.module';
+import { SchoolPageModule } from '../pages/school/school.module';
 @NgModule({
 	declarations: [
 		NavbarexternallinksComponent,
     EducationComponent,
     SchooldetailComponent],
     imports: [IonicModule.forRoot(ComponentsModule),
-        EducationPageModule,],
+        SchoolPageModule,],
 	exports: [NavbarexternallinksComponent,
     EducationComponent,
     SchooldetailComponent]
