@@ -17,10 +17,10 @@ import { Observable } from 'rxjs/Observable';
 })
 export class EducationComponent {
 
-  schools: Observable<School[]>;
+  schools: Observable<{[key: string ]: School[]}>;
 
   constructor(public navParams: NavParams, public navCtrl: NavController, public schoolsProvider: SchoolsProvider) {
-    this.schools = new Observable<School[]>()
+    this.schools = new Observable<{[key: string ]: School[]}>()
     console.log('Hello EducationComponent Component')
   }
   

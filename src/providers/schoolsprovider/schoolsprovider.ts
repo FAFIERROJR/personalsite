@@ -17,8 +17,8 @@ export class SchoolsProvider {
     console.log('Hello SchoolsProvider');
   }
 
-  getSchools(): Observable<School[]>{
-    let schools = this.http.get('../../assets/data/schools.json') as Observable<School[]>
+  getSchools(): Observable<{[key: string ]: School[]}>{
+    let schools = this.http.get('../../assets/data/schools.json') as Observable<{[key: string ]: School[]}>
     schools.subscribe((schools_data) =>{
       console.log(schools_data)
     })
