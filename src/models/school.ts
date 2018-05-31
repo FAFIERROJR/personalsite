@@ -5,7 +5,7 @@ export class School{
     begin_year: number
     end_year: number
     img_url: string
-    honors: string
+    honors: string[]
     gpa: number
     notable_coursework: {[key: string]: Coursework}
 

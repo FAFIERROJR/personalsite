@@ -1,6 +1,10 @@
-import { Component } from '@angular/core';
-import { School } from '../../models/school';
-import { NavParams, NavController } from 'ionic-angular';
+import { Component } from '@angular/core'
+import { School } from '../../models/school'
+import { NavParams, NavController } from 'ionic-angular'
+import { SchoolsProvider } from '../../providers/schoolsprovider/schoolsprovider';
+import { AnonymousSubject } from 'rxjs';
+import { Observable } from 'rxjs/Observable';
+
 /**
  * Generated class for the EducationComponent component.
  *
@@ -13,22 +17,18 @@ import { NavParams, NavController } from 'ionic-angular';
 })
 export class EducationComponent {
 
-  schools: School[]
+  schools: Observable<School[]>;
 
-  constructor(public navParams: NavParams, public navCtrl: NavController) {
+  constructor(public navParams: NavParams, public navCtrl: NavController, public schoolsProvider: SchoolsProvider) {
+    this.schools = new Observable<School[]>()
     console.log('Hello EducationComponent Component')
-    this.schools = new Array
-
-    let csulb = new School('California State University Long Beach', 2016, 2018,
-     'https://firebasestorage.googleapis.com/v0/b/personalsite-d1f5a.appspot.com/o/CSULB.jpg?alt=media&token=8eb5eed8-7834-4353-b19d-119cfea92571')
-    let ucsc = new School('University of California at Santa Cruz', 2015, 2016,
-      'https://firebasestorage.googleapis.com/v0/b/personalsite-d1f5a.appspot.com/o/ucsc.jpg?alt=media&token=0dcd2637-63cd-4fb9-b5d8-775e976d7d3e')
-    let lahc = new School('Los Angeles Harbor College', 2012, 2015,
-    'https://firebasestorage.googleapis.com/v0/b/personalsite-d1f5a.appspot.com/o/LAHC.jpg?alt=media&token=7326980d-7006-4dd4-9254-e8de159b9dd8')
-
-    this.schools.push(csulb)
-    this.schools.push(ucsc)
-    this.schools.push(lahc)
+  }
+  
+  ngOnInit(){
+    this.schools = this.schoolsProvider.getSchools()
+    this.schools.subscribe((schools_data) =>{
+      console.log(schools_data)
+    });
   }
 
   go_to_school(school_name: string){

@@ -6,7 +6,7 @@
   <h4 class="ed-subtitle">Major GPA: 4.0</h4>
   </div>
   <div id="ed-content">
-    <ion-card class="school" *ngFor="let school of schools" (click)="go_to_school(school.name)">
+    <ion-card class="school" *ngFor="let school of (schools| async)?.schools" (click)="go_to_school(school.name)">
       <img class="school-img" src="{{school.img_url}}" />
       <div class="school-name">
           {{school.name}}
