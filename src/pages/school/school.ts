@@ -37,8 +37,15 @@ export class SchoolPage {
     this.schools_obvs = this.schoolsProvider.getSchools();
     this.schools_sub = this.schools_obvs.subscribe((schools: {[key: string ]: School[]}) =>{
       for(let school in schools.schools){
-        if(this.school_name == schools.schools[school].name){}
-        this.school = schools.schools[school]
+        if(this.school_name == schools.schools[school].name){
+          this.school = schools.schools[school]
+        }
+      }
+    },
+    err => console.log(err),
+    () =>{
+      if(this.school.name == ''){
+        this.navCtrl.setRoot('ErrorPage', {'error': 'No-such-school', 'errmsg': 'I didn\'t go to that school!'})
       }
     }
   )
