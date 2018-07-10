@@ -2,6 +2,7 @@ import { Component } from '@angular/core'
 import { School } from '../../models/school'
 import { NavParams, NavController } from 'ionic-angular'
 import { SchoolsProvider } from '../../providers/schoolsprovider/schoolsprovider';
+import {EfSchoolsProvider} from '../../providers/efschoolsprovider/efschoolsprovider';
 import { AnonymousSubject } from 'rxjs';
 import { Observable } from 'rxjs/Observable';
 
@@ -19,7 +20,7 @@ export class EducationComponent {
 
   schools: Observable<{[key: string ]: School[]}>;
 
-  constructor(public navParams: NavParams, public navCtrl: NavController, public schoolsProvider: SchoolsProvider) {
+  constructor(public navParams: NavParams, public navCtrl: NavController, public schoolsProvider: EfSchoolsProvider) {
     this.schools = new Observable<{[key: string ]: School[]}>()
     console.log('Hello EducationComponent Component')
   }

@@ -10,6 +10,7 @@ import { NavbarexternallinksComponent} from '../components/navbarexternallinks/n
 import { AngularFireModule } from 'angularfire2'
 import { AngularFirestoreModule, AngularFirestore } from 'angularfire2/firestore'
 import { SchoolsProvider } from '../providers/schoolsprovider/schoolsprovider';
+import {EfSchoolsProvider} from '../providers/efschoolsprovider/efschoolsprovider';
 import { HttpClientModule} from '@angular/common/http';
 
 
@@ -43,7 +44,8 @@ export const firebaseConfig = {
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     AngularFirestore,
-    SchoolsProvider
+    SchoolsProvider,
+    EfSchoolsProvider
   ]
 })
 export class AppModule {}
