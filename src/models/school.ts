@@ -2,9 +2,9 @@ import { Coursework } from "./coursework";
 
 export class School{
     name: string
-    begin_year: number
-    end_year: number
-    img_url: string
+    startYear: number
+    endYear: number
+    imgUrl: string
     honors: string[]
     gpa: number
     notable_coursework: {[key: string]: Coursework}
@@ -20,8 +20,8 @@ export class School{
     
     constructor(name: string, begin_year: number, end_year: number, img_url: string = ''){
         this.name = name
-        this.begin_year = begin_year
-        this.end_year = end_year
-        this.img_url = img_url
+        this.startYear = begin_year
+        this.endYear = end_year
+        this.imgUrl = img_url
     }
 }

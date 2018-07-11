@@ -18,10 +18,10 @@ import { Observable } from 'rxjs/Observable';
 })
 export class EducationComponent {
 
-  schools: Observable<{[key: string ]: School[]}>;
+  schools: Observable<School[]>;
 
   constructor(public navParams: NavParams, public navCtrl: NavController, public schoolsProvider: EfSchoolsProvider) {
-    this.schools = new Observable<{[key: string ]: School[]}>()
+    this.schools = new Observable<School[]>()
     console.log('Hello EducationComponent Component')
   }
   
@@ -32,8 +32,8 @@ export class EducationComponent {
     });
   }
 
-  go_to_school(school_name: string){
-    this.navCtrl.push('SchoolPage', {'school_name': school_name })
+  go_to_school(school_key: string){
+    this.navCtrl.push('SchoolPage', {'school_key': school_key })
   }
 
 }

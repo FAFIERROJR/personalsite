@@ -6,13 +6,13 @@
   <h4 class="ed-subtitle">Major GPA: 4.0</h4>
   </div>
   <div id="ed-content">
-    <ion-card class="school" *ngFor="let school of (schools| async)?.schools" (click)="go_to_school(school.name)">
-      <img class="school-img" src="{{school.img_url}}" />
+    <ion-card class="school" *ngFor="let school of schools | async" (click)="go_to_school(school.key)">
+      <img class="school-img" src="{{school.imgUrl}}" />
       <div class="school-name">
           {{school.name}}
       </div>
       <div class="school-years">
-        {{school.begin_year}}-{{school.end_year}}
+        {{school.startYear}}-{{school.endYear}}
       </div>
     </ion-card>
   </div>
