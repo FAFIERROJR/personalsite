@@ -11,7 +11,8 @@ import { School } from '../../models/school';
 */
 @Injectable()
 export class EfSchoolsProvider {
-  route = "https://api.franciscofierro.us/api/schools"
+  // route = "https://api.franciscofierro.us/api/schools"
+  route = "https:localhost:5001/api/schools"
 
   constructor(public http: HttpClient) {
     console.log('Hello EfSchoolsProvider Provider');
@@ -23,6 +24,10 @@ export class EfSchoolsProvider {
 
   getSchool(school_key: string): Observable<School>{
     return this.http.get<School>(this.route + '/' + school_key)
+  }
+
+  getSchoolProperty(school_key: string, school_property: string){
+    return this.http.get(this.route + "/" + school_key + "/" + school_property);
   }
 
 }
