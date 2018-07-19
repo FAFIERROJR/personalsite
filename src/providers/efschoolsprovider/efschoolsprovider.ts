@@ -12,7 +12,7 @@ import { School } from '../../models/school';
 @Injectable()
 export class EfSchoolsProvider {
   // route = "https://api.franciscofierro.us/api/schools"
-  route = "https:localhost:5001/api/schools"
+  route = "http://localhost:5000/api/schools"
 
   constructor(public http: HttpClient) {
     console.log('Hello EfSchoolsProvider Provider');

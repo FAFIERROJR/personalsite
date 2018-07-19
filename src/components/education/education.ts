@@ -30,6 +30,19 @@ export class EducationComponent {
     this.schools.subscribe((schools_data) =>{
       console.log(schools_data)
     });
+
+    //sort the schools by descending end year
+    this.schools = this.schools.map<School[], School[]>(schools_stream => {
+      schools_stream.sort((school_a, school_b) => {
+        if (school_a.endYear < school_b.endYear){
+          return 1;
+        }
+        else{
+          return -1;
+        }
+      })
+      return schools_stream
+    })
   }
 
   go_to_school(school_key: string){
