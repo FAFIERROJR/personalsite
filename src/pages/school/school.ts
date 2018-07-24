@@ -5,6 +5,7 @@ import { Coursework } from '../../models/coursework';
 import { SchoolsProvider } from '../../providers/schoolsprovider/schoolsprovider';
 import { Observable } from 'rxjs/Observable';
 import { Subscription } from 'rxjs';
+import { EfSchoolsProvider } from '../../providers/efschoolsprovider/efschoolsprovider';
 
 /**
  * Generated class for the SchoolPage page.
@@ -21,24 +22,23 @@ import { Subscription } from 'rxjs';
   templateUrl: 'school.html',
 })
 export class SchoolPage {
-  schools: {[key: string]: School}
-  schools_obvs : Observable<{[key: string ]: School[]}>
-  school_name: string
-  schools_sub: Subscription
+  schools: Observable<School[]>
+  school_key: string
   school: School
+  schools_sub: Subscription
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, public schoolsProvider: SchoolsProvider) {
-    this.school_name = this.navParams.get('school_name')
-    this.schools = {}
+  constructor(public navCtrl: NavController, public navParams: NavParams, public schoolsProvider: EfSchoolsProvider) {
+    this.school_key = this.navParams.get('school_key')
     this.school = new School('', 0, 0)
   }
 
   ngOnInit(){
-    this.schools_obvs = this.schoolsProvider.getSchools();
-    this.schools_sub = this.schools_obvs.subscribe((schools: {[key: string ]: School[]}) =>{
-      for(let school in schools.schools){
-        if(this.school_name == schools.schools[school].name){
-          this.school = schools.schools[school]
+    this.schools = this.schoolsProvider.getSchools();
+    this.schools_sub = this.schools.subscribe((schools: School[]) =>{
+      console.log(schools, this.school_key)
+      for(let school of schools){
+        if(this.school_key == school.key){
+          this.school = school
         }
       }
     },
