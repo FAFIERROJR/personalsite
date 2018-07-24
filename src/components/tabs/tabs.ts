@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { NavController } from 'ionic-angular';
 
 /**
  * Generated class for the TabsComponent component.
@@ -12,11 +13,8 @@ import { Component } from '@angular/core';
 })
 export class TabsComponent {
 
-  text: string;
-
-  constructor() {
+  constructor(public navCtrl: NavController) {
     console.log('Hello TabsComponent Component');
-    this.text = 'Hello World';
   }
 
   goToPage(page: string){
