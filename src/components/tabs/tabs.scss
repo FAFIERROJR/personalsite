@@ -1,0 +1,27 @@
+tabs {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left:0;
+    ion-row{
+        align-content: center;
+        justify-content: center;
+        a{
+            height: inherit;
+            width: min-content;
+            align-content: center;
+            justify-content: center;
+            justify-items: center;
+            align-items: center;
+            color: color($colors, my-yellow);
+            .tabTitle{
+                font-size: 1.2em;
+                font-weight: 900;
+            }
+            .tabIcon{
+                width: 100%;
+                clear: both;
+            }
+        }
+    }
+}
