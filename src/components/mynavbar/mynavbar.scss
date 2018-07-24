@@ -1,0 +1,23 @@
+mynavbar {
+    #headernav{
+        ion-row{
+            align-content: flex-end;
+            justify-content: center;
+            span{
+                color: white;
+                font-family: 'Roboto', sans-serif;
+                font-size: 2em;
+                font-style: bold; 
+                font-weight: 700;
+                float:left;
+                margin: .2em;
+
+            }
+
+            .external-links{
+                float: left;
+            }
+        }
+    }
+
+}

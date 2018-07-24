@@ -8,6 +8,7 @@
   <div id="ed-content">
     <ion-card class="school" *ngFor="let school of schools | async" (click)="go_to_school(school.key)">
       <img class="school-img" src="{{school.imgUrl}}" />
+      <div color="white">{{school.key}}</div>
       <div class="school-name">
           {{school.name}}
       </div>

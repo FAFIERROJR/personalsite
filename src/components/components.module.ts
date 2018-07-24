@@ -7,6 +7,7 @@ import { SchoolPageModule } from '../pages/school/school.module';
 import { ProjectsComponent } from './projects/projects';
 import { HonorsComponent } from './honors/honors';
 import { TabsComponent } from './tabs/tabs';
+import { MynavbarComponent } from './mynavbar/mynavbar';
 @NgModule({
 	declarations: [
 		NavbarexternallinksComponent,
@@ -14,7 +15,8 @@ import { TabsComponent } from './tabs/tabs';
     SchooldetailComponent,
     ProjectsComponent,
     HonorsComponent,
-    TabsComponent],
+    TabsComponent,
+    MynavbarComponent],
     imports: [IonicModule.forRoot(ComponentsModule),
         SchoolPageModule,],
 	exports: [NavbarexternallinksComponent,
@@ -22,6 +24,7 @@ import { TabsComponent } from './tabs/tabs';
     SchooldetailComponent,
     ProjectsComponent,
     HonorsComponent,
-    TabsComponent]
+    TabsComponent,
+    MynavbarComponent]
 })
 export class ComponentsModule {}
