@@ -1,6 +1,7 @@
 import { Coursework } from "./coursework";
 
 export class School{
+    key: string
     name: string
     startYear: number
     endYear: number
