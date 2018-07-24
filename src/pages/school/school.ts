@@ -39,6 +39,7 @@ export class SchoolPage {
       for(let school of schools){
         if(this.school_key == school.key){
           this.school = school
+          console.log(school)
         }
       }
     },

@@ -18,7 +18,7 @@ import { MynavbarComponent } from './mynavbar/mynavbar';
     TabsComponent,
     MynavbarComponent],
     imports: [IonicModule.forRoot(ComponentsModule),
-        SchoolPageModule,],
+    ],
 	exports: [NavbarexternallinksComponent,
     EducationComponent,
     SchooldetailComponent,
