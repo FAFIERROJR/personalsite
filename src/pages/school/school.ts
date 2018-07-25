@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { School } from '../../models/school';
 import { Coursework } from '../../models/coursework';
@@ -6,6 +6,8 @@ import { SchoolsProvider } from '../../providers/schoolsprovider/schoolsprovider
 import { Observable } from 'rxjs/Observable';
 import { Subscription } from 'rxjs';
 import { EfSchoolsProvider } from '../../providers/efschoolsprovider/efschoolsprovider';
+import { MynavbarComponent } from '../../components/mynavbar/mynavbar';
+import { HomePage } from '../home/home';
 
 /**
  * Generated class for the SchoolPage page.
@@ -15,7 +17,7 @@ import { EfSchoolsProvider } from '../../providers/efschoolsprovider/efschoolspr
  */
 
 @IonicPage({
-  segment: 'school/:school_name'
+  segment: 'school/:school_key'
 })
 @Component({
   selector: 'page-school',
@@ -30,6 +32,11 @@ export class SchoolPage {
   constructor(public navCtrl: NavController, public navParams: NavParams, public schoolsProvider: EfSchoolsProvider) {
     this.school_key = this.navParams.get('school_key')
     this.school = new School('', 0, 0)
+  }
+
+  goHome(){
+    console.log("listening")
+    this.navCtrl.setRoot('HomePage')
   }
 
   ngOnInit(){
