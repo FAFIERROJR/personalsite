@@ -1,8 +1,12 @@
 <!-- Generated template for the SchooldetailComponent component -->
 <div #schoolDetail>
   <div #years>
-    <span>Years Attended: {{this.school.beginYear}}-{{this.school.endYear}}</span>
+    <span>Years Attended: {{(school | async)?.startYear}}-{{(school | async)?.endYear}}</span>
   </div>
 
-  <honors [school_key]="school_key"></honors>
+  <ion-list>
+    <ion-item *ngFor="let honor of (school | async)?.honors">
+      <span>{{honor}}</span>
+    </ion-item>
+  </ion-list>
 </div>

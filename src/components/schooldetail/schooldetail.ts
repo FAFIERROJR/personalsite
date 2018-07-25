@@ -20,10 +20,13 @@ export class SchooldetailComponent {
 
   constructor(public schoolsProvider: EfSchoolsProvider) {
     console.log('Hello SchooldetailComponent Component');
+    this.school = new Observable<School>()
   }
 
   ngOnInit(){
+    console.log(this.school_key)
     this.school = this.schoolsProvider.getSchool(this.school_key)
+    this.school.subscribe((school) => console.log(school))
   }
 
 }
