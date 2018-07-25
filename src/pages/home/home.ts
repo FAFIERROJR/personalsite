@@ -15,4 +15,8 @@ export class HomePage {
     })
   }
 
+  ngOnViewWillLeave(){
+    this.events.unsubscribe('nav')
+  }
+
 }

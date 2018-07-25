@@ -19,10 +19,11 @@ export class HonorsComponent {
 
   constructor(public schoolsProvider: EfSchoolsProvider) {
     console.log('Hello HonorsComponent Component');
-    this.honors = schoolsProvider.getSchoolProperty(this.school_key, 'Honors') as Observable<string[]>;
 
   }
 
-  
+  ngOnInit(){
+    this.honors = this.schoolsProvider.getSchoolProperty(this.school_key, 'Honors') as Observable<string[]>;
+  }
 
 }

@@ -6,15 +6,12 @@
 -->
 <ion-header>
 
-  <mynavbar></mynavbar>>
+  <mynavbar></mynavbar>
 
 </ion-header>
 
 
 <ion-content padding>
-  <div #years>
-    <span>Years Attended: {{this.school.beginYear}}-{{this.school.endYear}}</span>
-  </div>
-
+  <schooldetail [school_key]="school_key"></schooldetail>
   <tabs></tabs>
 </ion-content>

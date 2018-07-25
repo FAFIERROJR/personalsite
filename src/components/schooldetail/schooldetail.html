@@ -1,4 +1,8 @@
 <!-- Generated template for the SchooldetailComponent component -->
-<div>
-  {{text}}
+<div #schoolDetail>
+  <div #years>
+    <span>Years Attended: {{this.school.beginYear}}-{{this.school.endYear}}</span>
+  </div>
+
+  <honors [school_key]="school_key"></honors>
 </div>
