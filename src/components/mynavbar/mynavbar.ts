@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Output, EventEmitter } from '@angular/core';
+import { Observable } from 'rxjs';
 
 /**
  * Generated class for the MynavbarComponent component.
@@ -12,11 +13,16 @@ import { Component } from '@angular/core';
 })
 export class MynavbarComponent {
 
-  text: string;
+  @Output() home: EventEmitter<boolean>
 
   constructor() {
     console.log('Hello MynavbarComponent Component');
-    this.text = 'Hello World';
+    this.home = new EventEmitter<boolean>()
+  }
+
+  goHome(){
+    this.home.emit(true)
+    console.log('emitting')
   }
 
 }
