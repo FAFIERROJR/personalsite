@@ -9,14 +9,26 @@ import { Subscription } from 'rxjs';
 })
 export class HomePage {
 
-  constructor(public navCtrl: NavController, public events: Events) {
-    events.subscribe('nav', (page) =>{
-      navCtrl.push(page)
-    })
+  constructor(public navCtrl: NavController) {
   }
 
   ngOnViewWillLeave(){
-    this.events.unsubscribe('nav')
+  }
+
+  goHome(){
+    this.navCtrl.setRoot('HomePage')
+  }
+
+  goToPage(event: any){
+    let page = event.page
+    let params = event.params
+    console.log("listening")
+    if(page == 'HomePage'){
+      this.navCtrl.setRoot(page)
+    }
+    else{
+      this.navCtrl.push(page, params);
+    }
   }
 
 }

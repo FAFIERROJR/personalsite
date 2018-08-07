@@ -5,11 +5,11 @@
   Ionic pages and navigation.
 -->
 <ion-header>
-  <mynavbar></mynavbar>
+  <mynavbar (home)="goHome()"></mynavbar>
 </ion-header>
 
 
 <ion-content padding>
-  <education></education>
-  <tabs></tabs>
+  <education (nav)="goToPage($event)"></education>
+  <tabs (nav)="goToPage($event)"></tabs>
 </ion-content>

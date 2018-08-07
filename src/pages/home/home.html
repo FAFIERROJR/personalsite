@@ -1,7 +1,7 @@
 <ion-header>
-  <mynavbar></mynavbar>
+  <mynavbar (home)="goHome()"></mynavbar>
 </ion-header>
 
 <ion-content padding>
-    <tabs></tabs>
+    <tabs (nav)="goToPage($event)"></tabs>
 </ion-content>

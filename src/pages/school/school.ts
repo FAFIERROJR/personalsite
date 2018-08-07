@@ -34,8 +34,19 @@ export class SchoolPage {
     this.school = new School('', 0, 0)
   }
 
-  goHome(){
+  goToPage(event: any){
+    let page = event.page
+    let params = event.params
     console.log("listening")
+    if(page == 'HomePage'){
+      this.navCtrl.setRoot(page)
+    }
+    else{
+      this.navCtrl.push(page, params);
+    }
+  }
+
+  goHome(){
     this.navCtrl.setRoot('HomePage')
   }
 
@@ -44,7 +55,7 @@ export class SchoolPage {
     this.schools_sub = this.schools.subscribe((schools: School[]) =>{
       console.log(schools, this.school_key)
       for(let school of schools){
-        if(this.school_key == school.key){
+        if(this.school_key == school.schoolKey){
           this.school = school
           console.log(school)
         }

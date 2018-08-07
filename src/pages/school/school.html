@@ -13,5 +13,5 @@
 
 <ion-content padding>
   <schooldetail [school_key]="school_key"></schooldetail>
-  <tabs></tabs>
+  <tabs (nav)="goToPage($event)"></tabs>
 </ion-content>
