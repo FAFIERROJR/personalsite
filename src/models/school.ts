@@ -1,14 +1,14 @@
 import { Coursework } from "./coursework";
 
 export class School{
-    key: string
+    schoolKey: string
     name: string
     startYear: number
     endYear: number
     imgUrl: string
     honors: string[]
     gpa: number
-    notable_coursework: {[key: string]: Coursework}
+    notable_coursework: Coursework
 
     /**
      * School Model
