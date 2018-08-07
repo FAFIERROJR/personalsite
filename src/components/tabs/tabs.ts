@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Output, EventEmitter } from '@angular/core';
 import { NavController, Events } from 'ionic-angular';
 
 /**
@@ -13,12 +13,15 @@ import { NavController, Events } from 'ionic-angular';
 })
 export class TabsComponent {
 
+  @Output() nav: EventEmitter<any>
+
   constructor(public navCtrl: NavController, public events: Events) {
     console.log('Hello TabsComponent Component');
+    this.nav = new EventEmitter<any>();
   }
 
   goToPage(page: string){
-    this.events.publish('nav', page)
+    this.nav.emit({'page': page, 'params': null})
   }
 
 }

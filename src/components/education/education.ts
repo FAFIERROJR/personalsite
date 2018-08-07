@@ -1,6 +1,6 @@
-import { Component } from '@angular/core'
+import { Component, EventEmitter, Output } from '@angular/core'
 import { School } from '../../models/school'
-import { NavParams, NavController } from 'ionic-angular'
+import { NavParams, NavController, Events } from 'ionic-angular'
 import { SchoolsProvider } from '../../providers/schoolsprovider/schoolsprovider';
 import {EfSchoolsProvider} from '../../providers/efschoolsprovider/efschoolsprovider';
 import { AnonymousSubject } from 'rxjs';
@@ -19,10 +19,12 @@ import { Observable } from 'rxjs/Observable';
 export class EducationComponent {
 
   schools: Observable<School[]>;
+  @Output() nav: EventEmitter<any>
 
   constructor(public navParams: NavParams, public navCtrl: NavController, public schoolsProvider: EfSchoolsProvider) {
     this.schools = new Observable<School[]>()
     console.log('Hello EducationComponent Component')
+    this.nav = new EventEmitter<any>();
   }
   
   ngOnInit(){
@@ -46,7 +48,7 @@ export class EducationComponent {
   }
 
   go_to_school(school_key: string){
-    this.navCtrl.push('SchoolPage', {'school_key': school_key })
+    this.nav.emit({'page': 'SchoolPage', 'params': { 'school_key': school_key}})
   }
 
 }
