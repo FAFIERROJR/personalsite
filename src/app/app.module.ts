@@ -12,6 +12,8 @@ import { AngularFirestoreModule, AngularFirestore } from 'angularfire2/firestore
 import { SchoolsProvider } from '../providers/schoolsprovider/schoolsprovider';
 import {EfSchoolsProvider} from '../providers/efschoolsprovider/efschoolsprovider';
 import { HttpClientModule} from '@angular/common/http';
+import { CourseProvider } from '../providers/courseprovider/courseprovider';
+import { ProjectProvider } from '../providers/projectprovider/projectprovider';
 
 
 export const firebaseConfig = {
@@ -45,7 +47,9 @@ export const firebaseConfig = {
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     AngularFirestore,
     SchoolsProvider,
-    EfSchoolsProvider
+    EfSchoolsProvider,
+    CourseProvider,
+    ProjectProvider
   ]
 })
 export class AppModule {}
