@@ -1,4 +1,4 @@
-import { Coursework } from "./coursework";
+import { Course } from "./course";
 
 export class School{
     schoolKey: string
@@ -8,7 +8,7 @@ export class School{
     imgUrl: string
     honors: string[]
     gpa: number
-    notable_coursework: Coursework
+    courses: Course[]
 
     /**
      * School Model

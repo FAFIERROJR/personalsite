@@ -1,7 +1,7 @@
 import { Component, ViewChild } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { School } from '../../models/school';
-import { Coursework } from '../../models/coursework';
+import { Course } from '../../models/course';
 import { SchoolsProvider } from '../../providers/schoolsprovider/schoolsprovider';
 import { Observable } from 'rxjs/Observable';
 import { Subscription } from 'rxjs';
