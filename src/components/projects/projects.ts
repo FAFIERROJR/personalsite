@@ -1,4 +1,9 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { Observable } from 'rxjs/Observable';
+import { Project } from '../../models/project';
+import { ProjectProvider } from '../../providers/projectprovider/projectprovider';
+import { Course } from '../../models/course';
+import { CourseProvider } from '../../providers/courseprovider/courseprovider';
 
 /**
  * Generated class for the ProjectsComponent component.
@@ -12,11 +17,16 @@ import { Component } from '@angular/core';
 })
 export class ProjectsComponent {
 
-  text: string;
+  @Input() courseName: string
+  projects: Observable<Project[]>
 
-  constructor() {
-    console.log('Hello ProjectsComponent Component');
-    this.text = 'Hello World';
+  constructor(projectProvider: ProjectProvider) {
+    console.log('Hello ProjectsComponent Component')
+    if(this.courseName != undefined){
+      this.projects = projectProvider.getProjectsForCourse(this.courseName)
+    }else{
+      this.projects = projectProvider.getAllProjects()
+    }
   }
 
 }

@@ -4,23 +4,16 @@ tabs {
     bottom: 0;
     left:0;
     ion-row{
-        align-content: center;
         justify-content: center;
         a{
-            height: inherit;
-            width: min-content;
-            align-content: center;
-            justify-content: center;
-            justify-items: center;
-            align-items: center;
             color: color($colors, my-yellow);
+            margin: 1vw;
             .tabTitle{
                 font-size: 1.2em;
                 font-weight: 900;
             }
             .tabIcon{
-                width: 100%;
-                clear: both;
+                
             }
         }
     }
