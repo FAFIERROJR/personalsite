@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams, Events } from 'ionic-angular';
+import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
 /**
- * Generated class for the EducationPage page.
+ * Generated class for the ProjectPage page.
  *
  * See https://ionicframework.com/docs/components/#navigation for more info on
  * Ionic pages and navigation.
@@ -10,25 +10,14 @@ import { IonicPage, NavController, NavParams, Events } from 'ionic-angular';
 
 @IonicPage()
 @Component({
-  selector: 'page-education',
-  templateUrl: 'education.html',
+  selector: 'page-project',
+  templateUrl: 'project.html',
 })
-export class EducationPage {
+export class ProjectPage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
-  ngOnInit(){
-  }
-
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad EducationPage')
-  }
-
-
-  goHome(){
-    this.navCtrl.setRoot('HomePage')
-  }
 
   goToPage(event: any){
     let page = event.page
@@ -40,6 +29,14 @@ export class EducationPage {
     else{
       this.navCtrl.push(page, params);
     }
+  }
+
+  goHome(){
+    this.navCtrl.setRoot('HomePage')
+  }
+
+  ionViewDidLoad() {
+    console.log('ionViewDidLoad ProjectPage');
   }
 
 }

@@ -1,0 +1,50 @@
+{
+    "schools": 
+    [
+        {
+            "name": "California State University Long Beach",
+            "begin_year": 2016,
+            "end_year": 2018,
+            "img_url": "https://firebasestorage.googleapis.com/v0/b/personalsite-d1f5a.appspot.com/o/CSULB.jpg?alt=media&token=8eb5eed8-7834-4353-b19d-119cfea92571",
+            "honors": ["Magna Cum Laude", "President's List All 4 Semesters"],
+            "gpa": 3.944,
+            "notable_coursework": {
+                "CECS491": {
+                    "name": "CECS491 A/B: Senior Project",
+                    "description": "Designed a web application during Fall semester using an iterative waterfall methodology. Implemented during Spring semester as a single-page application that will be ported to iOS and Android.  Employed agile SCRUM methodology Coded in TypeScript, HTML, and SASS using Ionic, Cordova, Bootstrap, Angular, AngularFire, and Firebase. Acted as the team lead during Spring semester. Delegated tasks. Oversaw progress of each team member and overall. Monitored burndown.",
+                    "link": "https://speakup.host"
+                }
+            }
+        },
+        {
+            "name": "University of California at Santa Cruz",
+            "begin_year": 2015,
+            "end_year": 2016,
+            "img_url": "https://firebasestorage.googleapis.com/v0/b/personalsite-d1f5a.appspot.com/o/ucsc.jpg?alt=media&token=0dcd2637-63cd-4fb9-b5d8-775e976d7d3e",
+            "honors": ["Osher Reentry $5000 Scholarship", "Dean's List Winter and Spring Quarters"],
+            "gpa": 4.0 ,
+            "notable_coursework": {
+                "CECS491": {
+                    "name": "CECS491 A/B: Senior Project",
+                    "description": "Designed a web application during Fall semester using an iterative waterfall methodology. Implemented during Spring semester as a single-page application that will be ported to iOS and Android.  Employed agile SCRUM methodology Coded in TypeScript, HTML, and SASS using Ionic, Cordova, Bootstrap, Angular, AngularFire, and Firebase. Acted as the team lead during Spring semester. Delegated tasks. Oversaw progress of each team member and overall. Monitored burndown.",
+                    "link": "https://speakup.host"
+                }
+            }
+        },
+        {
+            "name": "Los Angeles Harbor College",
+            "begin_year": 2012,
+            "end_year": 2015,
+            "img_url": "https://firebasestorage.googleapis.com/v0/b/personalsite-d1f5a.appspot.com/o/LAHC.jpg?alt=media&token=7326980d-7006-4dd4-9254-e8de159b9dd8",
+            "honors": ["Dean's List All Semesters"],
+            "gpa": 3.8 ,
+            "notable_coursework": {
+                "CECS491": {
+                    "name": "CECS491 A/B: Senior Project",
+                    "description": "Designed a web application during Fall semester using an iterative waterfall methodology. Implemented during Spring semester as a single-page application that will be ported to iOS and Android.  Employed agile SCRUM methodology Coded in TypeScript, HTML, and SASS using Ionic, Cordova, Bootstrap, Angular, AngularFire, and Firebase. Acted as the team lead during Spring semester. Delegated tasks. Oversaw progress of each team member and overall. Monitored burndown.",
+                    "link": "https://speakup.host"
+                }
+            }
+        }
+    ]
+}

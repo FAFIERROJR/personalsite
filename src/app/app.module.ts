@@ -9,6 +9,11 @@ import { NavbarexternallinksComponent} from '../components/navbarexternallinks/n
 
 import { AngularFireModule } from 'angularfire2'
 import { AngularFirestoreModule, AngularFirestore } from 'angularfire2/firestore'
+import { SchoolsProvider } from '../providers/schoolsprovider/schoolsprovider';
+import {EfSchoolsProvider} from '../providers/efschoolsprovider/efschoolsprovider';
+import { HttpClientModule} from '@angular/common/http';
+import { CourseProvider } from '../providers/courseprovider/courseprovider';
+import { ProjectProvider } from '../providers/projectprovider/projectprovider';
 
 
 export const firebaseConfig = {
@@ -30,6 +35,7 @@ export const firebaseConfig = {
     IonicModule.forRoot(MyApp),
     AngularFireModule.initializeApp(firebaseConfig),
     AngularFirestoreModule,
+    HttpClientModule,
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -39,7 +45,11 @@ export const firebaseConfig = {
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
-    AngularFirestore
+    AngularFirestore,
+    SchoolsProvider,
+    EfSchoolsProvider,
+    CourseProvider,
+    ProjectProvider
   ]
 })
 export class AppModule {}

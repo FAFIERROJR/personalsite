@@ -1,15 +1,7 @@
 <ion-header>
-  <ion-navbar text-align-center color="my-blue-green">
-    <ion-row align-items-center>
-      <span>
-        Francisco Fierro
-      </span>
-      <navbarexternallinks class="external-links"></navbarexternallinks>
-    </ion-row>
-  </ion-navbar>
+  <mynavbar (home)="goHome()"></mynavbar>
 </ion-header>
 
 <ion-content padding>
-  <education></education>
-
+    <tabs (nav)="goToPage($event)"></tabs>
 </ion-content>

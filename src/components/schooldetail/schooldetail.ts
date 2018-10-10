@@ -1,4 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { School } from '../../models/school';
+import { EfSchoolsProvider } from '../../providers/efschoolsprovider/efschoolsprovider';
+import { Observable } from 'rxjs';
 
 /**
  * Generated class for the SchooldetailComponent component.
@@ -12,11 +15,18 @@ import { Component } from '@angular/core';
 })
 export class SchooldetailComponent {
 
-  text: string;
+  @Input() school_key: string
+  school: Observable<School>
 
-  constructor() {
+  constructor(public schoolsProvider: EfSchoolsProvider) {
     console.log('Hello SchooldetailComponent Component');
-    this.text = 'Hello World';
+    this.school = new Observable<School>()
+  }
+
+  ngOnInit(){
+    console.log(this.school_key)
+    this.school = this.schoolsProvider.getSchool(this.school_key)
+    this.school.subscribe((school) => console.log(school))
   }
 
 }

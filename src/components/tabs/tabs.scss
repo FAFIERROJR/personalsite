@@ -1,0 +1,20 @@
+tabs {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left:0;
+    ion-row{
+        justify-content: center;
+        a{
+            color: color($colors, my-yellow);
+            margin: 1vw;
+            .tabTitle{
+                font-size: 1.2em;
+                font-weight: 900;
+            }
+            .tabIcon{
+                
+            }
+        }
+    }
+}

@@ -1,8 +1,14 @@
+import { Course } from "./course";
+
 export class School{
+    schoolKey: string
     name: string
-    begin_year: number
-    end_year: number
-    img_url: string;
+    startYear: number
+    endYear: number
+    imgUrl: string
+    honors: string[]
+    gpa: number
+    courses: Course[]
 
     /**
      * School Model
@@ -12,10 +18,11 @@ export class School{
      * @param end_year      the last year of attendance
      * @param img_url       the url of the school's card img stored in firestore
      */
-    constructor(name: string, begin_year: number, end_year: number, img_url: string){
+    
+    constructor(name: string, begin_year: number, end_year: number, img_url: string = ''){
         this.name = name
-        this.begin_year = begin_year
-        this.end_year = end_year
-        this.img_url = img_url
+        this.startYear = begin_year
+        this.endYear = end_year
+        this.imgUrl = img_url
     }
 }
