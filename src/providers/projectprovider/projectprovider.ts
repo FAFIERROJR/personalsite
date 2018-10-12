@@ -24,7 +24,7 @@ export class ProjectProvider {
   }
   
   getProjectsForCourse(courseName: string): Observable<Project[]>{
-    return this.http.get<Project[]>(this.route + '/' + courseName);
+    return this.http.get<Project[]>(this.route + '/ByCourse/' + courseName);
   }
 
   getProject(projectKey: string): Observable<Project>{
