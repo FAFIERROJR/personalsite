@@ -33,7 +33,7 @@
         {
             "projectKey": "algorithms2",
             "projectName": "Analysis of Algorithms",
-            "description": "Designed algorithms in pseudocode to solve problems according to greddy, dynamic programming, and network flow principles and according to time and space complexity requirements. Proved the validity of solutions and their complexities. ",
+            "description": "Designed algorithms in pseudocode to solve problems according to greedy, dynamic programming, and network flow principles and according to time and space complexity requirements. Proved the validity of solutions and their complexities. ",
             "courseName": "CS101"
         }
     ]
