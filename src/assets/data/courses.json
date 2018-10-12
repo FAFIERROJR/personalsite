@@ -1,0 +1,34 @@
+{
+    "courses": [
+        {
+            "courseName": "CECS491",
+            "courseTitle": "Senior Project",
+            "schoolKey": "csulb"
+        },
+        {
+            "courseName": "CECS378",
+            "courseTitle": "Intro to Computer Security Principles",
+            "schoolKey": "csulb"
+        },
+        {
+            "courseName": "CECS453",
+            "courseTitle": "Mobile App Development",
+            "schoolKey": "csulb"
+        },
+        {
+            "courseName": "EE380",
+            "courseTitle": "Schotastic Probability and Statistics",
+            "schoolKey": "csulb"
+        },
+        {
+            "courseName": "CS101",
+            "courseTitle": "Data Structures and Algorithms",
+            "schoolKey": "ucsc"
+        },
+        {
+            "courseName":"CS102",
+            "courseTitle": "Analysis of Algorithms",
+            "schoolKey": "ucsc"
+        }
+    ]
+}
