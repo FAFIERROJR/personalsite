@@ -14,8 +14,10 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
   templateUrl: 'project.html',
 })
 export class ProjectPage {
+  courseName: string
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
+    this.courseName = this.navParams.get('courseName')
   }
 
 

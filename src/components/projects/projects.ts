@@ -4,6 +4,7 @@ import { Project } from '../../models/project';
 import { ProjectProvider } from '../../providers/projectprovider/projectprovider';
 import { Course } from '../../models/course';
 import { CourseProvider } from '../../providers/courseprovider/courseprovider';
+import { NavParams } from 'ionic-angular';
 
 /**
  * Generated class for the ProjectsComponent component.
@@ -20,13 +21,18 @@ export class ProjectsComponent {
   @Input() courseName: string
   projects: Observable<Project[]>
 
-  constructor(projectProvider: ProjectProvider) {
+  constructor(public projectProvider: ProjectProvider) {
     console.log('Hello ProjectsComponent Component')
     if(this.courseName != undefined){
       this.projects = projectProvider.getProjectsForCourse(this.courseName)
     }else{
       this.projects = projectProvider.getAllProjects()
     }
+    // let project : Project = new Project()
+    // project.projectName = 'CECS491'
+    // project.description = 'Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum '
+    // this.projects = Observable.of([project, project])
+
   }
 
 }

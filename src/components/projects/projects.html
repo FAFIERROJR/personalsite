@@ -2,9 +2,9 @@
 <div>
   <h4 id="title">Projects</h4>
   <ion-list no-lines>
-    <ion-item *ngFor="let project of projects | async" class="item">
-      <span class="subtitle">{{project.projectName}}</span>
-      <span>{{project.description}}</span>
+    <ion-item *ngFor="let project of projects | async" class="item" text-wrap>
+      <a class="subtitle">{{project.projectName}}</a>
+      <p class="description">{{project.description}}</p>
     </ion-item>
   </ion-list>
 </div>
