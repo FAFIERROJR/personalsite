@@ -4,7 +4,8 @@ import { Project } from '../../models/project';
 import { ProjectProvider } from '../../providers/projectprovider/projectprovider';
 import { Course } from '../../models/course';
 import { CourseProvider } from '../../providers/courseprovider/courseprovider';
-import { NavParams } from 'ionic-angular';
+import { NavParams, ModalController } from 'ionic-angular';
+import { ProjectslidesComponent } from '../projectslides/projectslides';
 
 /**
  * Generated class for the ProjectsComponent component.
@@ -21,7 +22,7 @@ export class ProjectsComponent {
   @Input() courseName: string
   projects: Observable<Project[]>
 
-  constructor(public projectProvider: ProjectProvider) {
+  constructor(public projectProvider: ProjectProvider, public modalCtrl: ModalController) {
     console.log('Hello ProjectsComponent Component')
 
   }
@@ -40,4 +41,7 @@ export class ProjectsComponent {
     // this.projects = Observable.of([project, project])
   }
 
+  popSlides(projectKey: string){
+    this.modalCtrl.create(ProjectslidesComponent, {'projectKey': projectKey}).present()
+  }
 }
