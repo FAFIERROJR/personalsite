@@ -4,7 +4,7 @@ import { School } from '../../models/school';
 import { Course } from '../../models/course';
 import { SchoolsProvider } from '../../providers/schoolsprovider/schoolsprovider';
 import { Observable } from 'rxjs/Observable';
-import { Subscription } from 'rxjs';
+import { Subscription, TestScheduler } from 'rxjs';
 import { EfSchoolsProvider } from '../../providers/efschoolsprovider/efschoolsprovider';
 import { MynavbarComponent } from '../../components/mynavbar/mynavbar';
 import { HomePage } from '../home/home';
@@ -31,7 +31,6 @@ export class SchoolPage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public schoolsProvider: EfSchoolsProvider) {
     this.school_key = this.navParams.get('school_key')
-    this.school = new School('', 0, 0)
   }
 
   goToPage(event: any){
@@ -66,8 +65,13 @@ export class SchoolPage {
       if(this.school.name == ''){
         this.navCtrl.setRoot('ErrorPage', {'error': 'No-such-school', 'errmsg': 'I didn\'t go to that school!'})
       }
-    }
-  )
+    })
+
+
+  //  //test code////
+  //  let school  = new School('ts','testschool', 2013, 1233,)
+  //  this.schools = Observable.of([school])
+  //  //////////////////////////////////////
 
   }
 

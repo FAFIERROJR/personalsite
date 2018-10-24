@@ -3,13 +3,13 @@ projects {
         color: color($colors, my-blue-green);
         font-size: 2em;
     }
-    #description{
+
+    .subtitle{
         font-size: 1.5em;
     }
-    .subtitle{
-        color: color($colors, my-yellow)
-    }
     .item{
+    }
+    .description{
         color: color($colors, my-blue-green);
     }
 }

@@ -19,7 +19,8 @@ export class School{
      * @param img_url       the url of the school's card img stored in firestore
      */
     
-    constructor(name: string, begin_year: number, end_year: number, img_url: string = ''){
+    constructor(key: string, name: string, begin_year: number, end_year: number, img_url: string = ''){
+        this.schoolKey = key
         this.name = name
         this.startYear = begin_year
         this.endYear = end_year

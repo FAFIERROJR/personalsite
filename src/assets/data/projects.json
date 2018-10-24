@@ -1,0 +1,40 @@
+{
+    "projects":[
+        {
+            "projectKey": "speakup",
+            "projectName": "Speak Up",
+            "description": "Created a chat application intended for classroom use. Performed requirements analysis and design using an iterative waterfall methodology. Led team of five through implementation. Implemented as a single-page web and native mobile application using Ionic, Cordova, Bootstrap, Angular, AngularFire, and Firebase. Employed agile SCRUM methodology and Git Flow convention for managing version control. Deployed app on the web using Firebase Hosting and on the Google Play Store.",
+            "courseName": "CECS491"
+        },
+        {
+            "projectKey": "memories",
+            "projectName": "Memories",
+            "description": "Developed a native Android application featuring photo-sharing based on location. Collaborated on a four-person team. Designed and implemented the front end of the photo viewing. Used Android Studio, Java, XML, Git, Google Maps API, and Firebase.",
+            "courseName": "CECS453"
+        },
+        {
+            "projectKey": "encriptipy",
+            "projectName": "Encriptipy",
+            "description": "Developed a faux-ransomware app that would encrypt files in a user’s directory using AES, sign the files with HMAC-SHA256, and encrypt the keys with RSA. Keys were generated using a PRNG. Used Python and its cryptography module.",
+            "courseName": "CECS378"
+        },
+        {
+            "projectKey": "statistics",
+            "projectName": "Schotastic Modeling",
+            "description": "Simulated stochastic scenarios using Python and the NumPy module. Graphed probability mass and density functions, histograms for scenarios that fell along different distribrutions, using the Matplotlib module",
+            "courseName": "EE380"
+        },
+        {
+            "projectKey": "algorithms1",
+            "projectName": "Data Structures And Algorithms",
+            "description": "Proved corollary properties of data structures including: stacks, queues, binary search trees, and hash tables. Proved complexities of novelly modified verstions of popular algorithms",
+            "courseName": "CS101"
+        },
+        {
+            "projectKey": "algorithms2",
+            "projectName": "Analysis of Algorithms",
+            "description": "Designed algorithms in pseudocode to solve problems according to greedy, dynamic programming, and network flow principles and according to time and space complexity requirements. Proved the validity of solutions and their complexities. ",
+            "courseName": "CS102"
+        }
+    ]
+}

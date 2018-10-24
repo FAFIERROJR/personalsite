@@ -12,6 +12,8 @@
 
 
 <ion-content padding>
-  <projects></projects>
+  <div class="content">
+    <projects [courseName]="courseName"></projects>
+  </div>
   <tabs (nav)="goToPage($event)"></tabs>
 </ion-content>

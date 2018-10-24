@@ -23,7 +23,7 @@ export class CourseProvider {
   }
   
   getCoursesForSchool(schoolKey: string): Observable<Course[]>{
-    return this.http.get<Course[]>(this.route + '/getBySchool/' + schoolKey);
+    return this.http.get<Course[]>(this.route + '/school/' + schoolKey);
   }
 
   getCourse(courseKey: string): Observable<Course>{
