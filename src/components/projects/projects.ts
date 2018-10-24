@@ -23,17 +23,21 @@ export class ProjectsComponent {
 
   constructor(public projectProvider: ProjectProvider) {
     console.log('Hello ProjectsComponent Component')
-    console.log(this.courseName)
-    if(this.courseName != undefined){
-      this.projects = projectProvider.getProjectsForCourse(this.courseName)
-    }else{
-      this.projects = projectProvider.getAllProjects()
-    }
-    let project : Project = new Project()
-    project.projectName = 'CECS491'
-    project.description = 'Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum '
-    this.projects = Observable.of([project, project])
 
+  }
+
+  ngOnInit(){
+    console.log("courseName: ", this.courseName)
+    if(this.courseName != undefined){
+      this.projects = this.projectProvider.getProjectsForCourse(this.courseName)
+    }else{
+      this.projects = this.projectProvider.getAllProjects()
+    }
+    // //test code
+    // let project : Project = new Project()
+    // project.projectName = 'CECS491'
+    // project.description = 'Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum '
+    // this.projects = Observable.of([project, project])
   }
 
 }
