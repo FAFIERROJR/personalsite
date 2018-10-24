@@ -1,8 +1,8 @@
 tabs {
-    width: 100%;
-    position: absolute;
-    bottom: 0;
-    left:0;
+    padding: 0;
+    #tabs{
+        width: 100%;
+    }
     ion-row{
         justify-content: center;
         a{
