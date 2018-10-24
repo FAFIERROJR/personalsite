@@ -29,29 +29,29 @@ export class EducationComponent {
   }
   
   ngOnInit(){
-    this.schools = this.schoolsProvider.getSchools()
-    this.schools.subscribe((schools_data) =>{
-      console.log(schools_data)
-    });
+    // this.schools = this.schoolsProvider.getSchools()
+    // this.schools.subscribe((schools_data) =>{
+    //   console.log(schools_data)
+    // });
 
-    //sort the schools by descending end year
-    this.schools = this.schools.map<School[], School[]>(schools_stream => {
-      schools_stream.sort((school_a, school_b) => {
-        if (school_a.endYear < school_b.endYear){
-          return 1;
-        }
-        else{
-          return -1;
-        }
-      })
-      return schools_stream
-    })
+    // //sort the schools by descending end year
+    // this.schools = this.schools.map<School[], School[]>(schools_stream => {
+    //   schools_stream.sort((school_a, school_b) => {
+    //     if (school_a.endYear < school_b.endYear){
+    //       return 1;
+    //     }
+    //     else{
+    //       return -1;
+    //     }
+    //   })
+    //   return schools_stream
+    // })
 
-  //   //test code////
-  //  let school  = new School('ts','testschool', 2013, 1233, "https://firebasestorage.googleapis.com/v0/b/personalsite-d1f5a.appspot.com/o/ucsc.jpg?alt=media&token=0dcd2637-63cd-4fb9-b5d8-775e976d7d3e")
+    //test code////
+   let school  = new School('ts','testschool', 2013, 1233, "https://firebasestorage.googleapis.com/v0/b/personalsite-d1f5a.appspot.com/o/ucsc.jpg?alt=media&token=0dcd2637-63cd-4fb9-b5d8-775e976d7d3e")
 
-  //  this.schools = Observable.of([school])
-  //  //////////////////////////////////////
+   this.schools = Observable.of([school])
+   //////////////////////////////////////
   }
 
   go_to_school(school_key: string){

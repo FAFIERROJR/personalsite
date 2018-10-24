@@ -18,6 +18,7 @@ export class ProjectPage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
     this.courseName = this.navParams.get('courseName')
+    console.log(this.courseName)
   }
 
 

@@ -28,17 +28,17 @@ export class SchooldetailComponent {
 
   ngOnInit(){
     console.log(this.school_key)
-    this.school = this.schoolsProvider.getSchool(this.school_key)
-    this.school.subscribe((school) => console.log(school))
+    // this.school = this.schoolsProvider.getSchool(this.school_key)
+    // this.school.subscribe((school) => console.log(school))
 
-  //   //test code////
-  //  let school  = new School('ts','testschool', 2013, 1233,)
-  //  let course = new Course()
-  //  course.courseName = "testcourse"
-  //  school.courses = []
-  //  school.courses.push(course)
-  //  this.school = Observable.of(school)
-  //  //////////////////////////////////////
+    //test code////
+   let school  = new School('ts','testschool', 2013, 1233,)
+   let course = new Course()
+   course.courseName = "testcourse"
+   school.courses = []
+   school.courses.push(course)
+   this.school = Observable.of(school)
+   //////////////////////////////////////
   }
 
   goToPage(page: string, params: string){
